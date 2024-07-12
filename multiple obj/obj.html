@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple obj</title>
+</head>
+
+<body>
+
+    <table align="center" border="1" cellpading="2">
+        <thead>
+            <tr>
+                <td>Sr.no</td>
+                <td>Name</td>
+                <td>Grid</td>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+</body>
+
+<script type="text/javascript">
+
+    let record = [
+        {
+            name: "meet",
+            phone: 123456,
+            grid: 5557
+        },
+
+        {
+            name: "milan",
+            phone: 15654,
+            grid: 5368
+        },
+
+        {
+            name: "jay",
+            phone: 25654,
+            grid: 5368
+        },
+
+        {
+            name: "dax",
+            phone: 35654,
+            grid: 5368
+        }
+    ]
+
+
+    let tbl = " ";
+    record.map((val, index)=> {
+        tbl += `
+        <tr>
+        <td>${++index}</td>  
+         <td>${val.name}</td>  
+        <td>${val.grid}</td>      
+        </tr>
+        `
+    })
+    document.getElementById('data').innerHTML = tbl;
+
+</script>
+
+</html>

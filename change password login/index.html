@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="login">Login</div>
+        <form>
+
+            <input id="email" type="email" class=" email  form-control" placeholder="Enter your email">
+            <input id="password" type="password" class=" email password  form-control"
+                placeholder="Enter your password">
+            <input type="checkbox" class="ff">Remember me <a href="#" class="text-warning"
+                style="color:azure; padding-left: 105px; text-decoration: none ;">Forgot
+                Password </a>
+            <div class="sign d-flex">
+                <Button
+                    style="border-radius: 18px; width: 100%;height: 40px; display: block; border: 0 solid black; margin-top: 20px;">
+                    <a href="#"
+                        style="width: 100%; display: block ; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border: none;font-size:22px;color: black; ">
+                        Login</a>
+                </Button>
+
+            </div>
+            <div class="d-flex">
+                <p style="margin-left: 50px; font-family: 'Times New Roman', Times, serif;"> Don't have an account ?
+                </p>
+                <a href="#"
+                    style="color:white ; font-family:Georgia, 'Times New Roman', Times, serif ; text-decoration: none; margin: 10px;">Register</a>
+            </div>
+        </form>
+        <script>
+
+            var email = "xuv@gmail.com";
+            var password = "xyz_123";
+
+
+            var useremail = prompt("enter your old email for change password"); {
+
+                if (useremail == email) {
+                    var userpassword = prompt("please enter new password");
+                    email = useremail;
+                    password = userpassword;
+                }
+                else {
+                    // alert("please enter valid email");
+                }
+                document.getElementById("email").innerHTML = email;
+                document.getElementById("password").innerHTML = password;
+
+            }
+
+
+        </script>
+    </div>
+
+
+
+
+</body>
+
+</html>
