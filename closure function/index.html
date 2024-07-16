@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure function</title>
+</head>
+
+<body>
+
+    <button id="red" style="border-radius: 20px; border: 1px solid white;">red</button>
+    <button id="orange" style="border-radius: 20px; border: 1px solid white;">yellow</button>
+    <button id="green" style="border-radius: 20px; border: 1px solid white;">green</button>
+
+    <script>
+
+        
+    function clickOne(color){
+            return function(){
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+
+        document.getElementById("red").onclick = clickOne("red");
+        document.getElementById("orange").onclick = clickOne("orange");
+        document.getElementById("green").onclick = clickOne("green");
+
+
+    </script>
+
+</body>
+
+</html>

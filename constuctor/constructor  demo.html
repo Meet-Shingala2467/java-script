@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+    class Demo {
+        constructor(grid, name, std, city) {
+            this.grid = grid;
+            this.name = name;
+            this.std = std;
+            this.city = city;
+
+        }
+
+        getter() {
+            console.log(`GRID :- ${this.grid}`);
+            console.log(`NAME :- ${this.name}`);
+            console.log(`STD :- ${this.std}`);
+            console.log(`CITY :- ${this.city}`);
+        }
+    }
+
+    let st1 = new Demo (5557,"Meet",12,"Bangluru");
+    let st2 = new Demo (5558,"jay",10,"delhi");
+    let st3 = new Demo (4943,"dax",8,"Ahemdabad");
+    let st4 = new Demo (4242,"Milan",11,"Dubai");
+    let st5 = new Demo (4589,"Naitik",1,"Austrelia");
+
+    st1.getter();
+    st2.getter();
+    st3.getter();
+    st4.getter();
+    st5.getter();
+</script>

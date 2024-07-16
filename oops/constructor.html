@@ -1,0 +1,47 @@
+<script type="text/javascript">
+
+    class Demo {
+
+        constructor (){
+            this.z=2;
+            this.name= "Meet";
+        }
+
+        sum() {
+            let a = this .z +10 , b=5;
+            let c = a + b;
+            console.log(`sum  :- ${c}`);
+            console.log(`NAME :- ${this.name}`);
+        }
+
+        sub() {
+            let a = 10, b = 5;
+            let c = a - b;
+            console.log(`sub  :- ${c}`);
+        }
+
+        mul() {
+            let a = this .z +10 , b=5;
+            let c = a * b;
+            console.log(`mul  :- ${c}`);
+        }
+
+        div() {
+            let a = 10, b = 5;
+            let c = a / b;
+            return c;
+        }
+    }
+
+
+
+    let obj = new Demo();
+    obj.sum();
+    obj.sub();
+    obj.mul();
+     console.log( `div :- ${obj.div()}`);  // [jyare return karavu hoi tyare] 
+
+
+
+
+</script>
