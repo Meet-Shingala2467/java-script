@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+    let arr = [10, 2, 3, 5, 8];
+    let size = arr.length;
+
+          // asending order
+
+    for (let i = 0; i < size; i++) {
+        for (let j = i + 1; i < size; j++) {
+            let tmp;
+            if (arr[i] > arr[j]) {
+                tmp = arr[i]
+                arr[i] > arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+    console.log(arr);
+</script>
