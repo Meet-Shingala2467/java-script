@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">             
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+
+        let fruits = ["mango", "orange", "banana", "orange", "graps"];
+        let length= fruits.length;
+        document.write("<br><br> <b>fruits</b> <br><br>");
+
+
+        let list="<ul>"
+
+            for (let i=0;i<length;i++){
+                list += "<li>"+fruits[i]+"</li>";
+            }
+            list +="</ul>";
+            document.write(list);
+
+
+       
+        document.write("<br><br> <b>push</b> <br><br>");
+        fruits.push("cherry");
+        document.write(fruits);
+
+
+        document.write("<br><br> <b>pop</b> <br><br>");
+        fruits.pop("");
+        document.write(fruits);
+
+
+        
+        document.write("<br><br> <b>shift</b> <br><br>");
+        fruits.shift("");
+        document.write(fruits);
+
+
+        document.write("<br><br> <b>shift</b> <br><br>");
+        fruits.unshift("chicku");
+        document.write(fruits);
+
+
+        document.write("<br><br> <b>shift</b> <br><br>");
+        fruits.splice(1,2,"barry");
+        document.write(fruits);
+
+    </script>
+
+</body>
+
+</html>
