@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+</head>
+<body style="background-color:orange;">
+    
+    <div align="center" style="background-color:lightblue; width: 500px; margin: 0 auto; margin-top: 180px; padding: 20px; border-radius: 10px;">
+        <h2>Form Validation</h2>
+        <from>
+            Name : <input type ="text" id="name">
+            <br>
+            <spam id="nameerr" style="color:red"></spam>
+            <br><br>
+            Email : <input type ="text" id="email">
+            <br>
+            <spam id="emailerr" style="color:red"></spam>
+            <br><br>
+            Password : <input type="password" id="password">
+            <br>
+            <span id="passerr" style="color: red;"></span>
+            <br><br>
+            <button type="button" onclick="formvalidation()">submit</button>
+            <br><br>
+            <p id="success" style="color: green;"></p>
+        </from>
+    </div>
+
+        <script type="text/javascript">
+            const formvalidation = () =>{
+                let name = document.getElementById(name).value;
+                let email = document.getElementById(email).value;
+                let password = document.getElementById(password).value;
+                let check = true
+
+                if(!name){
+                    document.getElementById(nameerr).innerHTML = name is required;
+                    check = false;
+                }
+                if(!email){
+                    document.getElementById(emailerr).innerHTML = email is required;
+                    check = false;
+                }else{
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if(!emailRegex.test(email)){
+                        document.getElementById(emailerr).innerHTML =("email is not vaild");
+                        check = false;
+                    }
+                }
+
+                if(!password){
+                    document.getElementById(passerr).innerHTML = Password is required;
+                    check = false
+                } else {
+                    if((password.length < 6)) {
+                        document.getElementById(passerr).innerHTML = Password should be at least 8 characters;
+                    }
+                    else if((password.length > 16)){
+                        document.getElementById(passerr).innerHTML = password should not excees 16 characters;
+                    }
+                    else if(! / [A-Z] /.test(password)){
+                       alert("Password should have at least 1 uppercase letter");
+                    }
+                    else if(! / [a-z] /.test(password)){
+                       alert("Password should have at least 1 lowercase letter");
+                    }
+                    else if(! / [0-9] /.test(password)){
+                        alert("Password should have at least 1 number");
+                    }
+                    else if(! / [!@#$%^&*(),.?":{}|<>] /.test(valpassword)){
+                        alert("Password should have at least 1 special character");
+                    }
+                }
+
+                if(check === true){
+                    document.getElementById(success).innerHTML = "Form is submited"
+                }
+                document.getElementById(name).value = "";
+                document.getElementById(email).value = "";
+                document.getElementById(password).value = "";
+            }
+
+        </script>
+
+</body>
+</html>
