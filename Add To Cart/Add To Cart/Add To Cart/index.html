@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Add To Cart</title>
+  <style>
+    /* Custom CSS for positioning */
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-container {
+      margin-left: auto; /* Pushes the button to the right side */
+    }
+  </style>
+
+</head>
+
+<body>
+  <header style="margin-bottom: 150px;">
+    <nav class="nav" style="background-color:#901e5c;">
+      <div class="container">
+        <h1 class="logo"><a href="/index.html"><img class="mt-2 " src="https://www.kailashsweets.com/templates/images/logo.jpg" alt="Kailash Sweets" style="align-items: center ; width: 112px; margin-left: 550px; "></a></h1>
+        
+        <ul>
+          <li><a href="cart.html" class="current " style="color: white;">Cart</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- <section class="mt-3">
+    <div class="row ">
+      <div class="col- ">
+        <div class="card" style="margin-left: 10px;" >
+          <img style="margin-left: 10px; width: 370px; height: 370px;" src="https://www.kailashsweets.com/upload/product/luxury-sweets-9-20230809130537.jpg"
+            class="card-img-top" alt="Anjeer Exotica">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Anjeer Exotica</h5>
+                <p class="card-text">₹1750/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn ">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/almond-appy-rostie-20240430152437.jpg"
+            class="card-img-top" alt="Almond Appy Rostie">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Almond Appy Rostie</h5>
+                <p class="card-text">₹700/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn ">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/golden-coco-pearl-20240430153528.jpg"
+            class="card-img-top" alt="Golden Coco Pearl">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Golden Coco Pearl</h5>
+                <p class="card-text">₹800/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn ">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3"  >
+        <div class="card"  >
+          <img st src="https://www.kailashsweets.com/upload/product/caramel-roasted-almond-20240430153120.jpg"
+            class="card-img-top" alt="Caramel Roasted Almond">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Caramel Roasted Almond</h5>
+                <p class="card-text">₹700/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn ">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="container mt-5">
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/luxury-sweets-9-20230809130537.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Product 1</h5>
+                <p class="card-text">₹500/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/luxury-sweets-9-20230809130537.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Product 2</h5>
+                <p class="card-text">₹600/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/luxury-sweets-9-20230809130537.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Product 3</h5>
+                <p class="card-text">₹700/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <img src="https://www.kailashsweets.com/upload/product/luxury-sweets-9-20230809130537.jpg" class="card-img-top" alt="Product 4">
+          <div class="card-body">
+            <div class="card-details">
+              <div>
+                <h5 class="card-title text-danger">Product 4</h5>
+                <p class="card-text">₹800/400 g</p>
+              </div>
+              <div class="btn-container">
+                <a href="#" class="btn">
+                  <img src="img/inner-cart-icon.png" style="width: 20px; height: 24px;" alt="Add to Cart">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
