@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's shoose </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #fff; 
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.25em;
+            margin: 0 0 10px;
+        }
+
+        .card-text {
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Men's Wear Store</h1>
+        <a href="cart.html"><i class="fas fa-shopping-cart cart-icon"></i></a>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="product" class="row">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Men's Wear Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const product = [
+            {
+                id: 1,
+                img: "https://images.meesho.com/images/products/332827505/nkhmp_1200.jpg",
+                name: "Men's formal shoose",
+                highlights: "Comfortable and stylish",
+                price: 799,
+                qty: 1,
+            },
+            {
+                id: 2,
+                img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSBYQjP1LJ6wrWti9xOiujOf4FAF82hs7GIe2-wtTbUaVh7HLptXDmBFjuzo_kP4VRL5M20eED69k6NG2_GFnxU5IHwfTwtVuq_1n0IgqYR",
+                name: "HRX by Hrithik Roshan Men White Mesh Running Sports Shoes",
+                highlights: "Classic and durable",
+                price: 1291,
+                qty: 1,
+            },
+            {
+                id: 3,
+                img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQcucDTdzR4dLAGUeyow9HDuswrtIPSUgbXEaKq09I4uN03cjwTYmUya48RKvA2ehDEJyFsgsXsLnxY7AcPCP-wxAbuo95bSl4Qeew4-_jp9Cw_zhf8D6q_7HA2",
+                name: "BATA NAVY BLUE LACE-UP SNEAKER SHOES FOR MEN",
+                highlights: "Elegant and formal",
+                price: 2999,
+                qty: 1,
+            },
+            {
+                id: 4,
+                img: "https://images.meesho.com/images/products/84194992/fpmf6_1200.jpg",
+                name: "Fancy Trendy Men Formal Sandle",
+                highlights: "Water-resistant",
+                price: 899,
+                qty: 1,
+            },
+            {
+                id: 5,
+                img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRJjT7OZ_lU_QjXVZq_ISuFYBESaDFKhr5cvQ-2u_Jnn0RGp7geJLcvAK5LLLgraA3UYkBjuOoz3Oear8QnyBqJvG5cDKuqOvQAkU9a1hAWFagIjDyL76xp",
+                name: "Men's Sunglasses",
+                highlights: "UV protection",
+                price: 799,
+                qty: 1,
+            },
+            {
+                id: 6,
+                img: "https://img.freepik.com/free-photo/pair-trainers_144627-3799.jpg?semt=ais_hybrid",
+                name: "HIGHLANDER Men Green Driving Shoes",
+                highlights: "Genuine leather",
+                price: 499,
+                qty: 1,
+            },
+            {
+                id: 7,
+                img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRw-9IY6Yln4IcMNQwEis5OV5udhUnic-iI8LuoWS3ZeM1SJzkIy3z8HGSnncDTvye6LyFFVpycxwptW2nL9QBxt3XbTFM8OlABWlUTyUDKcd8-ggkq6O6XGY4",
+                name: "Campus Mike Blue Men's Sports Running Shoes 10",
+                highlights: "Adjustable length",
+                price: 399,
+                qty: 1,
+            },
+            {
+                id: 8,
+                img: "https://images.meesho.com/images/products/422282802/sfpwu_1200.jpg",
+                name: "HAADIYA Mens Tan Partywear Shoes",
+                highlights: "Silk material",
+                price: 299,
+                qty: 1,
+            },
+        ];
+
+        function viewProducts() {
+            let tbl = "";
+            product.map((val) => {
+                tbl += `
+                   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card mb-4">
+                           <div class="imgs m-3">
+                               <img src="${val.img}" class="card-img-top">
+                           </div>
+                           <div class="card-body">
+                                <h5 class="card-title">${val.name}</h5>
+                                <p class="card-text mb-2">${val.highlights}</p>
+                                <p class="card-text mb-2">RS.${val.price}</p>
+                                <a onclick="addToCart(${val.id})" class="btn">Buy Now</a>
+                            </div>
+                        </div>
+                    </div> 
+                `;
+            });
+            document.getElementById("product").innerHTML = tbl;
+        }
+        viewProducts();
+
+        let cart = [];
+        function addToCart(id) {
+            let allcart = JSON.parse(localStorage.getItem("cart")) || [];
+            let found = false;
+
+            for (let i = 0; i < allcart.length; i++) {
+                if (allcart[i].id == id) {
+                    allcart[i].qty++;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                let productToAdd = product.find((item) => item.id === id);
+                if (productToAdd) {
+                    productToAdd.qty = 1;
+                    allcart.push(productToAdd);
+                } else {
+                    console.error("Product not available!");
+                    return;
+                }
+            }
+            localStorage.setItem("cart", JSON.stringify(allcart));
+            alert("Added to Cart");
+        }
+    </script>
+</body>
+</html>
