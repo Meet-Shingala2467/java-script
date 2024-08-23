@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KING'S API</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .thumbnail {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        .btn-custom {
+            background-color: #343a40;
+            color: #fff;
+            font-size: large;
+        }
+        .btn-custom:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+        .table-custom {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h2>KING'S API</h2>
+        <div class="card mb-4">
+            <div class="card-body">
+                <table class="table table-bordered table-custom">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Discount</th>
+                            <th>Discounted Total</th>
+                            <th>Thumbnail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="product-id"></td>
+                            <td id="product-title"></td>
+                            <td id="product-price"></td>
+                            <td id="product-quantity"></td>
+                            <td id="product-total"></td>
+                            <td id="product-discount"></td>
+                            <td id="product-discounted-total"></td>
+                            <td id="product-thumbnail"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button onclick="displayRandomProduct()" id="random-button" class="btn btn-custom">
+            RANDOM CLICK
+        </button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Sample data object
+        const carts = [
+            {
+                "id": 1,
+                "products": [
+                    {
+                        "id": 144,
+                        "title": "RACING CAR",
+                        "price": 5000,
+                        "quantity": 1,
+                        "total": 5010,
+                        "thumbnail": "https://e7.pngegg.com/pngimages/889/629/png-clipart-go-kart-kart-racing-race-track-personal-protective-equipment-others-king-racing.png"
+                    }
+                ],
+                "total": 5010,
+                "userId": 329,
+                "totalProducts": 1,
+                "totalQuantity": 5
+            },
+            {
+                "id": 2,
+                "products": [
+                    {
+                        "id": 200,
+                        "title": "BADSHAH",
+                        "price": 15.99,
+                        "quantity": 1,
+                        "total": 16.00,
+                        "thumbnail": "https://e7.pngegg.com/pngimages/656/60/png-clipart-playing-card-king-jack-card-game-king-miscellaneous-game-thumbnail.png"
+                    }
+                ],
+                "total": 17.00,
+                "userId": 555,
+                "totalProducts": 9,
+                "totalQuantity": 45
+            }
+        ];
+
+        function displayRandomProduct() {
+            let randomCartIndex = Math.floor(Math.random() * carts.length);
+            const selectedCart = carts[randomCartIndex];
+
+            let randomProductIndex = Math.floor(Math.random() * selectedCart.products.length);
+            const selectedProduct = selectedCart.products[randomProductIndex];
+
+            const discountPercentage = 10; // Example discount percentage
+            const originalTotal = selectedProduct.total;
+            const discountedTotal = (originalTotal * (1 - discountPercentage / 100)).toFixed(2);
+
+            document.getElementById("product-id").innerHTML = selectedProduct.id;
+            document.getElementById("product-title").innerHTML = selectedProduct.title;
+            document.getElementById("product-price").innerHTML = "$" + selectedProduct.price.toFixed(2);
+            document.getElementById("product-quantity").innerHTML = selectedProduct.quantity;
+            document.getElementById("product-total").innerHTML = "$" + originalTotal.toFixed(2);
+            document.getElementById("product-discount").innerHTML = discountPercentage + "%";
+            document.getElementById("product-discounted-total").innerHTML = "$" + discountedTotal;
+            document.getElementById("product-thumbnail").innerHTML = `<img src="${selectedProduct.thumbnail}" alt="${selectedProduct.title} Thumbnail" class="thumbnail" />`;
+        }
+
+        document.getElementById("random-button").addEventListener('click', displayRandomProduct);
+    </script>
+</body>
+
+</html>

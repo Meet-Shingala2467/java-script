@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body align="center" >
+<h2>Add User</h2>    
+
+<input type="hidden">
+<table border="1" align="center">
+    <tr>
+        <td>Name:-</td>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <td>phone:-</td>
+        <td><input type="text" id="phone"></td>
+    </tr>
+        <td>
+            <input type="button" id="add" onclick="saveRecord()" value="submit">
+            <input type="button" id="edit" onclick="saveRecord()" value="edit">
+        </td>
+    
+
+</table> 
+
+<br><br>
+
+
+<h2>view user</h2>
+<table align="center" border="1px">
+<thead>
+    <tr>
+        <th>Srno</th>
+        <th>user</th>
+        <th>Name</th>
+        <th>phone</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody id="users"></tbody>
+</table>
+</body>
+</html>
